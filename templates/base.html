@@ -40,7 +40,7 @@
         <form action="/search" method="get" class="d-flex mx-3">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query"
             id="query">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-primary" type="submit">Search</button>
         </form>
 
         {% if user.is_authenticated %}
@@ -56,11 +56,11 @@
         </ul>
         {% else %}
         <!-- Button to trigger Login modal -->
-        <button type="button" class="btn btn-success mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+        <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">
           LogIn
         </button>
         <!-- Button to trigger SginUp modal -->
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#signupModal">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">
           SginUp
         </button>
         
@@ -157,6 +157,7 @@
   </div>
 
   {% block body %} {% endblock body %}
+  {% block js %}{% endblock js %}
 
   <!-- Optional JavaScript; choose one of the two! -->
 

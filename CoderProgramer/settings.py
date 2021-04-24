@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'blog.apps.BlogConfig',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
