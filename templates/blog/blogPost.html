@@ -5,18 +5,27 @@
 {% block body %}
 {% load humanize %}
 {% load extras %}
+
+<!--Displaying Post-->
 <div class="container col-md-8 my-3">
   <h3 class="pb-4 mb-4 fst-italic border-bottom">From the CoderProgramer</h3>
   <article class="blog-post">
     <h2 class="blog-post-title">{{post.title}}</h2>
-    <p class="blog-post-meta">{{post.timeStamp}} by <a href="/about">{{post.author}}</a></p>
+    <p class="blog-post-meta">{{post.timeStamp}} by <a href="/about">{{post.author}}</a> (<span>{{post.views}} Views</span>)</p>
+
+
     <p>{{post.content|safe}}</p>
     <hr>
 </div>
+
+<!--Comments And Replies-->
 <div class="container col-md-8 my-3">
   <h2>Comments ({{comments.count}})</h2>
+
   <div class="my-2">
+    <!--User Login Logout frontend specific stuff-->
     {% if user.is_authenticated %}
+    <!--Post Comment-->
     <form action="/blog/postComment" method="POST">
       {% csrf_token %}
       <div class="mb-3">
@@ -33,7 +42,7 @@
     {% endif %}
   </div>
 
-
+  <!--Displaying Comments-->
   {% for comment in comments %}
   <div class="row my-3">
     <div class="col-md-1"><img class="rounded float-start w-100 p-2 border border-dark"
@@ -43,7 +52,9 @@
       <div>{{comment.comment}} </div>
       <div class="reply mx-0">
 
+         <!--User Login Logout frontend specific stuff-->
         {% if user.is_authenticated%}
+        <!--Post Reply-->
         <button class="btn btn-sm btn-primary my-2" type="button" data-bs-toggle="collapse"
           data-bs-target="#replyBox{{comment.sno}}" aria-expanded="false" aria-controls="replyBox{{comment.sno}}">
           Reply
@@ -71,8 +82,9 @@
         </button>
         {% endif %}
 
-
+        <!--Displaying Replies-->
         <div class="replies my-2">
+        <!--get_val is costum filter created in blog/templatetags/extras.py -->
           {% for reply in replyDict|get_val:comment.sno %}
           <div class="row my-2">
             <div class="col-md-1">
