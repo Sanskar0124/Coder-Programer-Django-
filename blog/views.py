@@ -3,6 +3,7 @@ from blog.models import Post, BlogComment
 from django.contrib.auth.models import User
 from django.contrib import messages
 from blog.templatetags import extras
+from django.core.paginator import Paginator
 
 # Create your views here.
 def blogHome(request):
@@ -15,6 +16,12 @@ def blogPost(request, slug):
     post.views = post.views + 1
     post.save()
 
+    # Pagination Logic
+    posts = Post.objects.all()
+    paginator = Paginator(posts, 1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     comments = BlogComment.objects.filter(post=post, parent=None)
     replies = BlogComment.objects.filter(post=post).exclude(parent=None)
     replyDict = {}
@@ -23,7 +30,7 @@ def blogPost(request, slug):
             replyDict[reply.parent.sno] = [reply]
         else:
             replyDict[reply.parent.sno].append(reply)
-    context = {'post': post, 'comments': comments, 'replyDict': replyDict}
+    context = {'post': post, 'comments': comments, 'replyDict': replyDict, 'page_obj': page_obj}
     return render(request, 'blog/blogPost.html', context)
 
 def postComment(request):

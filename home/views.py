@@ -10,9 +10,8 @@ from blog.models import Post
 # HTML Pages
 def home(request):
     # Fetch top three post number of views
-    views = Post.objects.all('post')
-    context = {}
-    return render(request, 'home/home.html', context) 
+
+    return render(request, 'home/home.html') 
 
 def about(request):
     return render(request, 'home/about.html') 
