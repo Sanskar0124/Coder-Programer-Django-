@@ -1,3 +1,309 @@
-body{
-    background-color: red;
+/*
+.pagination{
+    max-width: 66%;
+
+    margin-left: 260px;
 }
+
+.current{
+    margin-left: 302px;
+}
+
+.nextbtn{
+    margin-left: 30px;
+    margin-left: 330px;
+}
+
+
+
+@media screen and (max-width: 1496px) {
+    body{
+        background-color: red;
+    }
+    .nextbtn{
+        margin-left: 259px;
+    }
+  } 
+
+@media screen and (max-width: 1412px) {
+    body{
+        background-color: red;
+    }
+    .nextbtn{
+        margin-left: 177px;
+    }
+  } 
+
+@media screen and (max-width: 1342px) {
+    body{
+        background-color: red;
+    }
+    .nextbtn{
+        margin-left: 136px;
+    }
+  } 
+
+@media screen and (max-width: 1342px) {
+    body{
+        background-color: red;
+    }
+    .nextbtn{
+        margin-left: 136px;
+    }
+  } 
+
+@media screen and (max-width: 1350px) {
+    body{
+        background-color: red;
+    }
+    .current{
+        margin-left: 245px;
+    }
+  } 
+@media screen and (max-width: 1290px) {
+    body{
+        background-color: red;
+    }
+    .current{
+        margin-left: 188px;
+    }
+  } 
+@media screen and (max-width: 1200px) {
+    body{
+        background-color: red;
+    }
+    .current{
+        margin-left: 150px;
+    }
+  } 
+@media screen and (max-width: 1140px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -20px;
+    }
+  } 
+@media screen and (max-width: 1124px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -30px;
+    }
+  } 
+@media screen and (max-width: 1124px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -30px;
+    }
+  } 
+@media screen and (max-width: 1090px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -48px;
+    }
+  } 
+@media screen and (max-width: 1048px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -62px;
+    }
+  } 
+@media screen and (max-width: 1048px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -70px;
+    }
+  } 
+@media screen and (max-width: 1034px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -60px;
+    }
+  } 
+@media screen and (max-width: 1024px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -72px;
+    }
+  } 
+@media screen and (max-width: 1000px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -93px;
+    }
+  } 
+@media screen and (max-width: 980px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -100px;
+    }
+  } 
+@media screen and (max-width: 924px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -120px;
+    }
+  } 
+@media screen and (max-width: 890px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -145px;
+    }
+  } 
+@media screen and (max-width: 860px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -166px;
+    }
+  } 
+@media screen and (max-width: 824px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -179px;
+    }
+  } 
+@media screen and (max-width: 800px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -192px;
+    }
+  } 
+@media screen and (max-width: 735px) {
+    body{
+        background-color: red;
+    }
+    .firstbtn{
+        margin-left: -192px;
+    }
+  } 
+  @media screen and (max-width: 654px){
+  .nextbtn {
+      margin-left: 72px;
+  }
+}
+  @media screen and (max-width: 736px){
+  .current {
+      margin-left: 99px;
+  }
+}
+  @media screen and (max-width: 696px){
+  .firstbtn {
+      margin-left: 222px;
+  }
+}
+  @media screen and (max-width: 710px){
+  .firstbtn {
+      margin-left: -213px;
+  }
+}
+  @media screen and (max-width: 675px){
+  .nextbtn {
+      margin-left: 95px;
+  }
+}
+  @media screen and (max-width: 650px){
+  .firstbtn {
+      margin-left: -173px;
+  }
+  .current{
+      margin-left: 52px;
+  }
+  .nextbtn{
+      margin-left: 50px;
+  }
+}
+@media screen and (max-width: 580px){
+    .firstbtn {
+        margin-left: -227px;
+    }
+  }
+@media screen and (max-width: 502px){
+    .firstbtn {
+        margin-left: -227px;
+    }
+    .current {
+        margin-left: 19px;
+    }
+    .nextbtn {
+        margin-left: 27px;
+    }
+  }
+@media screen and (max-width: 502px){
+    .firstbtn {
+        margin-left: -241px;
+    }
+  }
+@media screen and (max-width: 437px){
+    .firstbtn {
+        margin-left: -241px;
+    }
+    .current {
+        margin-left: 5px;
+    }
+    .nextbtn {
+        margin-left: 5px;
+    }
+  }
+@media screen and (max-width: 396px){
+    .firstbtn {
+        margin-left: -253px;
+    }
+    .current {
+        margin-left: 5px;
+    }
+    .nextbtn {
+        margin-left: 5px;
+    }
+  }
+@media screen and (max-width: 388px){
+    .firstbtn {
+        margin-left: -254px;
+    }
+    .current {
+        margin-left: 0px;
+    }
+    .nextbtn {
+        margin-left: 0px;
+    }
+  }
+@media screen and (max-width: 377px){
+    .firstbtn {
+        margin-left: -254px;
+    }
+    .current {
+        display: none;
+    }
+    .nextbtn {
+        margin-left: 0px;
+    }
+  }
+*/
+

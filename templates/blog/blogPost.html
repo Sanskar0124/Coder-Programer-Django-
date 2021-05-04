@@ -3,7 +3,7 @@
 {% block title %} blogPost {% endblock title %}
 {% block css %}
   {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'css/blogPost.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/blogPost.css' %}">
 {% endblock css %}
 
 {% block body %}
@@ -12,42 +12,16 @@
 
 
 
-
-<!--Pagination-->
-{% for posts in page_obj %}
-    {# Each "contact" is a Contact model object. #}
-    <!--Displaying Post-->
+<!--Displaying Post-->
 <div class="container col-md-8 my-3">
   <h3 class="pb-4 mb-4 fst-italic border-bottom">From the CoderProgramer</h3>
   <article class="blog-post">
-    <h2 class="blog-post-title">{{posts.title}}</h2>
-    <p class="blog-post-meta">{{posts.timeStamp}} by <a href="/about">{{posts.author}}</a> (<span>{{posts.views}} Views</span>)</p>
-
-
-    <p>{{posts.content|safe}}</p>
+    <h2 class="blog-post-title">{{post.title}}</h2>
+    <p class="blog-post-meta">{{post.timeStamp}} by <a href="/about">{{post.author}}</a> (<span>{{post.views}} Views</span>)</p>
+    <p>{{post.content|safe}}</p>
     <hr>
 </div>
-    ...
-{% endfor %}
 
-
-<div class="pagination">
-    <span class="step-links">
-        {% if page_obj.has_previous %}
-            <a href="?page=1" class="btn btn-primary" role="button">&laquo; first</a>
-            <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary float-rigth" role="button">previous</a>
-        {% endif %}
-
-        <span class="current">
-            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-        </span>
-
-        {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary" role="button">next</a>
-            <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-primary" role="button">last &raquo;</a>
-        {% endif %}
-    </span>
-</div>
 
 
 <!--Comments And Replies-->
@@ -120,8 +94,7 @@
           {% for reply in replyDict|get_val:comment.sno %}
           <div class="row my-2">
             <div class="col-md-1">
-              <img class="rounded float-start w-75 p-2 m-2 border border-dark" src="/static/img/user.png"
-                alt="">
+              <img class="rounded float-start w-75 p-2 m-2 border border-dark" src="/static/img/user.png" alt="">
             </div>
           <div class="col-md-11"><b> {{reply.user.username}} </b> <span class="badge bg-secondary">{{comment.timeStamp|naturaltime}}</span>
           <div>{{reply.comment}} </div>

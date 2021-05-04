@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
+from pathlib import Path, os
 from django.contrib.messages import constants as messages
 
 
@@ -27,7 +27,7 @@ SECRET_KEY = 'f#22(45wd*+axwcf16r-12mhp83*+l6^oxk)c#tq!_dy^nf*qe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['138.197.96.81']
 
 
 # Application definition
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'CoderProgramer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': ['/var/www/CoderProgramer/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,9 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
