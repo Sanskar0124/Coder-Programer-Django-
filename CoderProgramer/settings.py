@@ -60,6 +60,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['templates'],
+        # Comment out while production
+        # 'DIRS': ['/var/www/CoderProgramer/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
